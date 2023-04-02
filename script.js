@@ -23,7 +23,9 @@ function setDate() {
     
     secondHand.style.transform = `rotate(${secondsDegrees + 90}deg)`;
     minsHand.style.transform = `rotate(${minsDegrees + 90}deg)`;
-    hourHand.style.transform = `rotate(${hourDegrees +90 }deg)`;
+    // hourHand.style.transform = `rotate(${hourDegrees +90 }deg)`;
+
+	hourHand.style.transform = `rotate(${Math.round(hourDegrees) + 90}deg)`;
 }
 
 setInterval(setDate, 1000);
